@@ -1,0 +1,15 @@
+.headerStyle{
+    margin: 25px;
+    padding-left: 25px;
+    text-decoration: underline;
+    color: rgb(36, 210, 30);
+    
+}
+
+.paraStyle{
+    margin: 25px;
+    padding: 15px;
+    border:  solid;
+    border-radius: 10px;
+    background-color: rgb(199, 255, 150);
+}
