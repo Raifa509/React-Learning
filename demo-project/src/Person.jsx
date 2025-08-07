@@ -1,6 +1,11 @@
 import React from 'react'
+import useFetch from './useFetch'
 
 function Person() {
+
+  const allUsers=useFetch('https://jsonplaceholder.typicode.com/users')
+  console.log(allUsers);
+  
   return (
     <>
     <h3 className='m-5 text-center'>Person</h3>
@@ -17,13 +22,18 @@ function Person() {
         </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Emil</td>
-                <td>Email</td>
-                <td>phone</td>
-                <td>Website</td>
-            </tr>
+           {
+            allUsers?.length>0 &&
+            allUsers.map((item,index)=>(
+              <tr key={index}>
+                <td>{index+1}</td>
+                <td>{item.name}</td>
+                <td>{item.email}</td>
+                <td>{item.phone}</td>
+                <td>{item.website}</td>
+              </tr>
+            ))
+           }
         </tbody>
     </table>
     </>

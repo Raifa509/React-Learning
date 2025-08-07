@@ -20,7 +20,7 @@ function App() {
     alert("Button Clicked!!!")
   }
 
-  const handleFocus=()=>{
+  const handleElement=()=>{
     inputElement.current.focus()
   }
   
@@ -32,7 +32,7 @@ function App() {
       <div className='m-5 d-flex border rounder p-2'>
         
         <input ref={inputElement} type="text" className="form-control" placeholder='Enter a text here' />
-         <button onClick={handleFocus} className="btn btn-warning text-light ms-3">Get focus</button>
+         <button onClick={handleElement} className="btn btn-warning text-light ms-3">Get focus</button>
          </div>
        
       <h1 style={{textAlign:"center",color:"blue",fontSize:35,marginTop:10}}>Demo Project</h1>

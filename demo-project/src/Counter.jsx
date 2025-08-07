@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 
 function Counter() {
-    const [count,setCount] = useState(0) 
+    const [count,setCount]=useState(0)
     useEffect(()=>{
         setTimeout(() => {
             setCount(count+1)
         }, 1000);
     },[count])
+
     return (
         <div className='m-5 border rounded p-5 d-flex justify-content-center'>
             <div className="d-flex justify-content-center align-items-center flex-column">
