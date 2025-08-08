@@ -6,6 +6,9 @@ import Counter from './Counter'
 import Person from "./Person";
 import './App.css'
 import { useRef } from 'react';
+import {Routes,Route} from "react-router-dom"
+import About from "./About"
+import Contact from './Contact';
 
 
 function App() {
@@ -26,6 +29,10 @@ function App() {
   
   return (
     <>
+    <Routes>
+    <Route path='/about' element={<About/>}/>
+    <Route path='/contact' element={<Contact/>}/>
+    </Routes>
     <Person/>
       <Counter/>
       <h3 className='m-5'>useRef hook</h3>
